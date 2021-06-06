@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "242706903611",
+    "project_id": "projectakhir-5ba20",
+    "storage_bucket": "projectakhir-5ba20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:242706903611:android:4eaa14e51cc01df2bee21e",
+        "android_client_info": {
+          "package_name": "com.example.projectakhir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "242706903611-qn61n9uhc8pk1425ih8stu69597qgbp6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.projectakhir",
+            "certificate_hash": "6f5e7606f35812f1b0cf6a938b74fbbc768dbdf3"
+          }
+        },
+        {
+          "client_id": "242706903611-gjfjmu934js6itvoshelrf384cihudeh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiBtXKZAhTibGliJBvlz--nCNn-dMPtdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "242706903611-gjfjmu934js6itvoshelrf384cihudeh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
