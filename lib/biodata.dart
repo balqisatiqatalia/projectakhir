@@ -36,5 +36,3 @@ class biodata{
     return map;
  } 
  }
-
- 

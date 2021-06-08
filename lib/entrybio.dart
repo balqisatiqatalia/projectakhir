@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'biodata.dart';
+import 'database.dart';
 
   class EntryForm extends StatefulWidget {
   final biodata bio;
@@ -97,19 +98,14 @@ import 'biodata.dart';
           'Save',
           textScaleFactor: 1.5,
           ),
-          onPressed: () {
-            if (bio == null) {
-            // tambah data
-            bio = biodata(nameController.text, int.parse(ageController.text),addressController.text);
-            } else {
-            // ubah data
-            bio.name = nameController.text;
-            bio.age = int.parse(ageController.text);
-            bio.address = addressController.text;
-            }
-            // kembali ke layar sebelumnya dengan membawa objek item
-            Navigator.pop(context, bio);
-            },
+         onPressed: () async {
+                            await Database.addItem(
+                              name: nameController.text,
+                              tgllahir: ageController.text,
+                              alamat: addressController.text,);
+                            Navigator.of(context).pop();
+                          }
+
  ),
  ),
       Container(width: 5.0,),

@@ -3,15 +3,20 @@ import 'package:projectakhir/database.dart';
 import 'biodata.dart';
 
   class Editbio extends StatefulWidget {
-  final biodata bio;
-  Editbio(this.bio);
+    final String name;
+  final String tgllahir;
+  final String alamat;
+  final String id;
+
+  Editbio(this.name, this.tgllahir, this.alamat, this.id);
+ 
     @override
-  EditbioState createState() => EditbioState(this.bio);
+  EditbioState createState() => EditbioState();
   }
 //class controller
     class EditbioState extends State<Editbio> {
     biodata bio;
-    EditbioState(this.bio);
+    
     TextEditingController nameController = TextEditingController();
     TextEditingController ageController = TextEditingController();
     TextEditingController addressController = TextEditingController();
@@ -19,11 +24,11 @@ import 'biodata.dart';
     @override
     Widget build(BuildContext context) {
     //kondisi
-        if (bio != null) {
-        nameController.text = bio.name;
-        ageController.text = bio.age.toString();
-        addressController.text = bio.address.toString();
-        }
+        
+        nameController.text = widget.name;
+        ageController.text = widget.tgllahir;
+        addressController.text = widget.alamat;
+        
     //rubah
       return Scaffold(
           appBar: AppBar(
@@ -99,10 +104,11 @@ import 'biodata.dart';
           textScaleFactor: 1.5,
           ),
           onPressed: () async{
-           await Database.addItem(
+           await Database.updateItem(
              name: nameController.text,
              tgllahir: ageController.text,
              alamat: addressController.text,
+             docId: widget.id,
            );
 
             // kembali ke layar sebelumnya dengan membawa objek item

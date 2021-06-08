@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projectakhir/editbio.dart';
 
 class ItemCard extends StatelessWidget {
   final String name;
@@ -20,7 +21,7 @@ class ItemCard extends StatelessWidget {
       padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          border: Border.all(color: Colors.blue.shade900)),
+          border: Border.all(color: Colors.lightBlue)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -56,22 +57,6 @@ class ItemCard extends StatelessWidget {
                 width: 60,
                 child: RaisedButton(
                     shape: CircleBorder(),
-                    color: Colors.green[900],
-                    child: Center(
-                        child: Icon(
-                      Icons.arrow_upward,
-                      color: Colors.white,
-                    )),
-                    onPressed: () {
-                      // if (onUpdate != null) onUpdate!();
-                    
-                    }),
-              ),
-              SizedBox(
-                height: 40,
-                width: 60,
-                child: RaisedButton(
-                    shape: CircleBorder(),
                     color: Colors.red[900],
                     child: Center(
                         child: Icon(
@@ -84,9 +69,56 @@ class ItemCard extends StatelessWidget {
                     }),
               )
             ],
-          )
-        ],
-      ),
+          ),
+          //  Row(
+          //   children: [
+          //     SizedBox(
+          //       height: 40,
+          //       width: 60,
+          //       child: RaisedButton(
+          //           shape: CircleBorder(),
+          //           color: Colors.red[900],
+          //           child: Center(
+          //               child: Icon(
+          //             Icons.edit,
+          //             color: Colors.white,
+          //           )),
+          //           onPressed: () {
+          //                  Navigator.of(context).push(
+          //                   MaterialPageRoute(
+          //                     builder: (context) {
+          //                       return Editbio(name, tgllahir, alamat, id);
+          //         },
+          //       ),
+          //     );
+
+                          //},
+              //      onPressed: () => Navigator.push( context,
+              //   MaterialPageRoute(
+              //     builder: (context) =>Editbio(name, tgllahir, alamat, id),                
+              //   ),
+              // ),
+          //     ),
+          //     )
+          //   ],
+          // ),
+          // InkWell(
+          //                 onTap: () {
+          //                  Navigator.of(context).push(
+          //                   MaterialPageRoute(
+          //                     builder: (context) {
+          //                       return Editbio(name, tgllahir, alamat, id);
+          //         },
+          //       ),
+          //     );
+
+          //                 },
+
+          // ),],
+      //),
+      
+    ],
+      )
     );
   }
 }
